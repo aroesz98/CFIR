@@ -3,6 +3,9 @@ ARM(CM4/CM7) Optimized FIR filter
 
 Interface:
 
+        CFIR(int taps, filterType type, windowType window, float minFrequency, float maxFrequency); // Constructor
+        ~CFIR(); // Destructor, free memory and deallocate buffers
+
         uint32_t init(); // Calculate coefficients, allocate memory buffers and configure filter to work
 
         float* getCoefficients(void);    // Get calculated coefficients
